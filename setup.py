@@ -43,9 +43,9 @@ This software package is a plugin module for HFOS.
           'isbntools>=4.3.3',
           'isbnlib>=3.6.6'
       ],
-      entry_points="""[hfos.components]
+      entry_points="""[isomer.components]
     library=hfos.library.manager:Manager
-[hfos.schemata]
+[isomer.schemata]
     book=hfos.library.book:Book
     """,
       test_suite="tests.main.main",

@@ -30,19 +30,19 @@ Module Library
 
 """
 
-from hfos.component import ConfigurableComponent, authorizedevent, handler
-from hfos.database import objectmodels
-from hfos.logger import hfoslog, error, warn
+from isomer.component import ConfigurableComponent, authorized_event, handler
+from isomer.database import objectmodels
+from isomer.logger import isolog, error, warn
 from datetime import datetime
-from hfos.events.objectmanager import updatesubscriptions
-from hfos.events.client import send
+from isomer.events.objectmanager import updatesubscriptions
+from isomer.events.client import send
 
 try:
     from isbntools.app import meta as isbnmeta
 except ImportError:
     isbnmeta = None
-    hfoslog("No isbntools found, install requirements-optional.txt",
-            lvl=warn, emitter="LIB")
+    isolog("No isbntools found, install requirements-optional.txt",
+           lvl=warn, emitter="LIB")
 
 libraryfieldmapping = {
     'wcat': {
@@ -56,15 +56,15 @@ libraryfieldmapping = {
 }
 
 
-class book_lend(authorizedevent):
+class book_lend(authorized_event):
     """Requests lending status of a book"""
 
 
-class book_return(authorizedevent):
+class book_return(authorized_event):
     """Requests lending status of a book"""
 
 
-class book_augment(authorizedevent):
+class book_augment(authorized_event):
     """Requests lending status of a book"""
 
 
@@ -72,7 +72,7 @@ class Manager(ConfigurableComponent):
     """
     The Library manages stored media objects
     """
-    channel = "hfosweb"
+    channel = 'isomer-web'
 
     configprops = {
         'isbnservice': {'type': 'string', 'title': 'Some Setting',
