@@ -1,1 +1,1 @@
-"""Library components for HFOS"""
+"""Library components for Isomer"""

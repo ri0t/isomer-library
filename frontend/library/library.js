@@ -51,7 +51,7 @@ class librarycomponent {
             if (msg.action !== 'fail') {
                 let data = msg.data;
                 let packet = {
-                    component: 'hfos.library.manager',
+                    component: 'isomer.library.manager',
                     action: 'book_augment',
                     uuid: data.uuid
                 };

@@ -1,4 +1,4 @@
-"""Library components for HFOS"""
+"""Library components for ISOMER"""
 
 __author__ = "Heiko 'riot' Weinen <riot@c-base.org>"
 __license__ = "AGPLv3"

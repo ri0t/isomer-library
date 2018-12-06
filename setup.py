@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# HFOS - Hackerfleet Operating System
-# ===================================
+# Isomer Application Framework
+# ============================
 # Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -23,30 +23,30 @@ __license__ = "AGPLv3"
 
 from setuptools import setup, find_packages
 
-setup(name="hfos-library",
+setup(name="isomer-library",
       version="0.0.1",
-      description="hfos-library - a federated small library management system",
-      author="Hackerfleet Community",
+      description="isomer-library - a federated small library management system",
+      author="Isomer Community",
       author_email="riot@c-base.org",
-      url="https://github.com/hackerfleet/hfos-library",
+      url="https://github.com/isomeric/isomer-library",
       license="GNU Affero General Public License v3",
       packages=find_packages(),
-      long_description="""HFOS - Library
-==============
+      long_description="""Isomer - Library
+================
 
 A modern, opensource approach to library management.
 
-This software package is a plugin module for HFOS.
+This software package is a plugin module for Isomer.
 """,
       install_requires=[
-          'hfos>=1.2.0',
+          'isomer>=1.0.0',
           'isbntools>=4.3.3',
           'isbnlib>=3.6.6'
       ],
       entry_points="""[isomer.components]
-    library=hfos.library.manager:Manager
+    library=isomer.library.manager:Manager
 [isomer.schemata]
-    book=hfos.library.book:Book
+    book=isomer.library.book:Book
     """,
       test_suite="tests.main.main",
       )

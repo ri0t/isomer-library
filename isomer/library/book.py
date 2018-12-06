@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# HFOS - Hackerfleet Operating System
-# ===================================
+# Isomer Application Framework
+# ============================
 # Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -134,7 +134,7 @@ BookForm = [
         'key': 'Lend',
         'type': 'button',
         'condition': 'model.available == true',
-        'onClick': '$ctrl.formAction("hfos.library.manager",'
+        'onClick': '$ctrl.formAction("isomer.library.manager",'
                    '"book_lend", $ctrl.model.uuid)',
         'title': 'Lend Book'
     },
@@ -142,7 +142,7 @@ BookForm = [
         'key': 'Return',
         'type': 'button',
         'condition': 'model.available != true',
-        'onClick': '$ctrl.formAction("hfos.library.manager", '
+        'onClick': '$ctrl.formAction("isomer.library.manager", '
                    '"book_return", $ctrl.model.uuid)',
         'title': 'Return Book'
     },
@@ -150,7 +150,7 @@ BookForm = [
         'key': 'augment',
         'type': 'button',
         'condition': 'model.isbn',
-        'onClick': '$ctrl.formAction("hfos.library.manager", '
+        'onClick': '$ctrl.formAction("isomer.library.manager", '
                    '"book_augment", $ctrl.model.uuid)',
         'title': 'Augment Book from ISBN database'
     },

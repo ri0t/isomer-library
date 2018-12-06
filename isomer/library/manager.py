@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# HFOS - Hackerfleet Operating System
-# ===================================
+# Isomer Application Framework
+# ============================
 # Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -88,7 +88,7 @@ class Manager(ConfigurableComponent):
         """
 
         super(Manager, self).__init__("LIB", *args)
-        self.config.creator = "Hackerfleet"
+        self.config.creator = "IsomerLib"
 
         self.log("Started")
 
@@ -196,7 +196,7 @@ class Manager(ConfigurableComponent):
                         self.log("Error during meta lookup: ", e, type(e),
                                  new_book.isbn, lvl=error, exc=True)
                         error_response = {
-                            'component': 'hfos.alert.manager',
+                            'component': 'isomer.alert.manager',
                             'action': 'notify',
                             'data': {
                                 'type': 'error',
